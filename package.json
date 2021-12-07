@@ -1,8 +1,26 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "clean": "lerna clean",
+    "release": "lerna publish",
+    "test": "lerna run test",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier -w"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier -w"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.5.1"
   },
   "workspaces": [
