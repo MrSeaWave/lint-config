@@ -2,22 +2,13 @@ module.exports = {
   plugins: ['promise'],
   rules: {
     // 在 JavaScript 中创建一个只有属性 setter 的对象是一个常见的错误，但从来没有为它定义相应的 getter 。没有读取器，你不能读取属性，所以它最终不会被使用。
-    'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
+    'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: true }],
     // 使用分号
     semi: ['error', 'always'],
     // 强制使用一致的换行符风格
     'linebreak-style': 'off',
     // 要求或禁止命名的 function 表达式
     'func-names': ['error', 'as-needed'],
-    // 要求使用骆驼拼写法
-    camelcase: [
-      'error',
-      {
-        allow: ['^UNSAFE_'],
-        properties: 'never',
-        ignoreGlobals: true,
-      },
-    ],
     // 要求或禁止使用拖尾逗号
     'comma-dangle': [
       'error',
@@ -54,12 +45,10 @@ module.exports = {
     'no-import-assign': 'error',
     // Disallow Number Literals That Lose Precision
     'no-loss-of-precision': 'error',
-
     // 'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unreachable-loop': 'error',
     // 禁用不必要的 .call() 和 .apply()
     'no-useless-call': 'error',
-
     // 需要把立即执行的函数包裹起来
     'wrap-iife': [
       'error',

@@ -49,3 +49,25 @@ yarn add eslint eslint-config-sea -D
 - [react-hooks](https://reactjs.org/docs/hooks-rules.html)
 
 - [airbnb](https://github.com/airbnb/javascript)
+
+## Contributing
+
+### Development
+
+```shell
+$ git clone https://github.com/MrSeaWave/lint-config.git
+$ cd lint-config/packages/eslint-config-sea
+# npm is not allowed.
+$ yarn
+```
+
+Run Test
+
+```shell
+$ yarn run test
+```
+
+### Pull Request Etiquette
+
+- 必须严格按照 [commitlint](https://github.com/conventional-changelog/commitlint#what-is-commitlint) 格式提交代码
+- 请尽可能提供 [test](./__tests__) 文件
