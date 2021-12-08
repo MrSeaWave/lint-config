@@ -11,7 +11,7 @@
 #### js
 
 ```bash
-yarn add eslint eslint-config-sea -D
+yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node -D
 ```
 
 在你的`.eslintrc`文件中修改为：
