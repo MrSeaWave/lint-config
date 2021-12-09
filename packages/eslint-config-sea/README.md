@@ -7,9 +7,7 @@
 
 ## Usage
 
-### install
-
-#### js
+### js
 
 ```bash
 yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import -D
@@ -23,7 +21,7 @@ yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugi
 }
 ```
 
-#### react
+### react
 
 ```bash
 yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react -D
@@ -37,7 +35,7 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 }
 ```
 
-如果想要有项目中有 hook ，那么
+如果想要在项目中使用 hook ，那么
 
 ```bash
 yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
@@ -51,10 +49,9 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 }
 ```
 
-> 如果要使用实验性功能，例如箭头作为类方法，则需要使用 @babel/eslint-parser 作为解析器。默认解析器（Espree）不支持实验性功能。
-> yarn add @babel/core @babel/eslint-parser -D
+**如果要使用实验性功能，例如箭头作为类方法，则需要使用 `@babel/eslint-parser` 作为解析器。默认解析器（Espree）不支持实验性功能。**
 
-`.eslintrc`文件中修改为：
+`yarn add @babel/core @babel/eslint-parser -D` 后，将`.eslintrc`文件中修改为：
 
 ```json
 {
