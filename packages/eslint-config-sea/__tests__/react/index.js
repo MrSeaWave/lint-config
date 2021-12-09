@@ -1,8 +1,9 @@
-// error    Unexpected var, use let or const instead  no-var
-var a = 1;
+import React from 'react';
 
-// warning  Unexpected console statement              no-console
-console.log('a', a);
-
-// warning  Prefer default export import/prefer-default-export
-export const b = 1;
+export default function IndexPage() {
+  return (
+    <div>
+      <h1 className={'page-index'}>Page index</h1>
+    </div>
+  );
+}

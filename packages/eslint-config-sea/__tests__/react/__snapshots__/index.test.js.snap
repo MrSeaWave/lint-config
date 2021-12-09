@@ -1024,7 +1024,7 @@ Object {
       },
     ],
     "no-console": Array [
-      "error",
+      "warn",
     ],
     "no-const-assign": Array [
       "error",
@@ -1965,6 +1965,9 @@ Object {
     "react/destructuring-assignment": Array [
       "error",
       "always",
+      Object {
+        "ignoreClassFields": true,
+      },
     ],
     "react/display-name": Array [
       "off",
@@ -2058,7 +2061,7 @@ Object {
       "never",
     ],
     "react/jsx-filename-extension": Array [
-      "error",
+      "off",
       Object {
         "extensions": Array [
           ".jsx",
@@ -2174,7 +2177,7 @@ Object {
       "error",
     ],
     "react/jsx-props-no-spreading": Array [
-      "error",
+      "off",
       Object {
         "custom": "enforce",
         "exceptions": Array [],
@@ -2240,7 +2243,7 @@ Object {
       "off",
     ],
     "react/no-array-index-key": Array [
-      "error",
+      "warn",
     ],
     "react/no-arrow-function-lifecycle": Array [
       "error",
@@ -2434,12 +2437,12 @@ Object {
       },
     ],
     "react/state-in-constructor": Array [
-      "error",
+      "off",
       "always",
     ],
     "react/static-property-placement": Array [
       "error",
-      "property assignment",
+      "static public field",
     ],
     "react/style-prop-object": Array [
       "error",
