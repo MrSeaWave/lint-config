@@ -484,7 +484,7 @@ Object {
       },
     ],
     "import/prefer-default-export": Array [
-      "error",
+      "warn",
     ],
     "import/unambiguous": Array [
       "off",
