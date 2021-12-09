@@ -7,7 +7,7 @@ describe('eslint-config-sea js', () => {
     const eslint = new ESLint({ cwd: __dirname });
     // 计算给定文件的config配置
     const result = await eslint.calculateConfigForFile(__filename);
-
+    delete result.parser;
     // 比对快照文件，第一次会生成snap,jest --updateSnapshot 可以重新生成快照文件
     expect(result).toMatchSnapshot();
   });

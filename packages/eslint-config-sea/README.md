@@ -51,6 +51,17 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 }
 ```
 
+> 如果要使用实验性功能，例如箭头作为类方法，则需要使用 @babel/eslint-parser 作为解析器。默认解析器（Espree）不支持实验性功能。
+> yarn add @babel/core @babel/eslint-parser -D
+
+`.eslintrc`文件中修改为：
+
+```json
+{
+  "parser": "@babel/eslint-parser"
+}
+```
+
 ## 规则
 
 - [eslint](https://github.com/eslint/eslint/tree/main/docs/rules)

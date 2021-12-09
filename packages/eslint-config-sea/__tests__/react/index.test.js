@@ -8,6 +8,9 @@ describe('eslint-config-sea react', () => {
     // 计算给定文件的config配置
     const result = await eslint.calculateConfigForFile(__filename);
 
+    delete result.parser;
+
+    delete result.parserOptions.babelOptions;
     // 比对快照文件，第一次会生成snap,jest --updateSnapshot 可以重新生成快照文件
     expect(result).toMatchSnapshot();
   });

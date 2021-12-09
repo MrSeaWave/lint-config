@@ -1,7 +1,0 @@
-{
-  "root": true,
-  "extends": "../../react.js",
-  "env": {
-    "jest": true
-  }
-}

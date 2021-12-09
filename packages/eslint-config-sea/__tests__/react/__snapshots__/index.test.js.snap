@@ -10,7 +10,6 @@ Object {
   "globals": Object {},
   "ignorePatterns": Array [],
   "noInlineConfig": undefined,
-  "parser": null,
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "generators": false,
@@ -2012,7 +2011,7 @@ Object {
       },
     ],
     "react/function-component-definition": Array [
-      "error",
+      "off",
       Object {
         "namedComponents": "function-expression",
         "unnamedComponents": "function-expression",
