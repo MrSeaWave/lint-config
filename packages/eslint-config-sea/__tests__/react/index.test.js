@@ -1,7 +1,7 @@
 const path = require('path');
 const { ESLint } = require('eslint');
 
-describe('eslint-config-sea js', () => {
+describe('eslint-config-sea react', () => {
   it('rules snapshot', async () => {
     // 创建一个实例。
     const eslint = new ESLint({ cwd: __dirname });
@@ -12,7 +12,7 @@ describe('eslint-config-sea js', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('lint js files', async () => {
+  it('lint react files', async () => {
     // 创建一个实例。
     const eslint = new ESLint({ cwd: __dirname });
     // Lint 文件
@@ -24,8 +24,6 @@ describe('eslint-config-sea js', () => {
 
     //  输出到控制台。
     console.log(resultText);
-
-    console.log('results', results);
 
     expect(results[0].errorCount).toBeTruthy();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`eslint-config-sea js rules snapshot 1`] = `
+exports[`eslint-config-sea react rules snapshot 1`] = `
 Object {
   "env": Object {
     "es6": true,
@@ -729,7 +729,7 @@ Object {
       },
     ],
     "no-console": Array [
-      "warn",
+      "error",
     ],
     "no-const-assign": Array [
       "error",
