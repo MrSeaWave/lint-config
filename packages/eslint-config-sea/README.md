@@ -11,7 +11,7 @@
 #### js
 
 ```bash
-yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node -D
+yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import -D
 ```
 
 在你的`.eslintrc`文件中修改为：
@@ -25,7 +25,7 @@ yarn add eslint-config-sea eslint-plugin-promise eslint-plugin-node -D
 #### react
 
 ```bash
-yarn add eslint eslint-config-sea -D
+yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react -D
 ```
 
 在你的`.eslintrc`文件中修改为：
@@ -36,19 +36,30 @@ yarn add eslint eslint-config-sea -D
 }
 ```
 
+如果想要有项目中有 hook ，那么
+
+```bash
+yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
+```
+
+`.eslintrc`文件中修改为：
+
+```json
+{
+  "extends": ["sea/react", "sea/hooks"]
+}
+```
+
 ## 规则
 
 - [eslint](https://github.com/eslint/eslint/tree/main/docs/rules)
-
 - [import](https://github.com/benmosher/eslint-plugin-import/tree/main/docs/rules)
-
 - [jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules)
-
 - [react](https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules)
-
 - [react-hooks](https://reactjs.org/docs/hooks-rules.html)
-
 - [airbnb](https://github.com/airbnb/javascript)
+- [standard](https://github.com/standard/eslint-config-standard)
+- [standard-react](https://github.com/standard/eslint-config-standard-react)
 
 ## Contributing
 

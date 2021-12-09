@@ -14,6 +14,7 @@ Object {
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "generators": false,
+      "jsx": true,
       "objectLiteralDuplicateProperties": false,
     },
     "ecmaVersion": 2018,
@@ -21,6 +22,8 @@ Object {
   },
   "plugins": Array [
     "import",
+    "react",
+    "jsx-a11y",
     "promise",
     "node",
   ],
@@ -120,7 +123,24 @@ Object {
       "error",
       Object {
         "enforceForClassFields": true,
-        "exceptMethods": Array [],
+        "exceptMethods": Array [
+          "render",
+          "getInitialState",
+          "getDefaultProps",
+          "getChildContext",
+          "componentWillMount",
+          "UNSAFE_componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "UNSAFE_componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "UNSAFE_componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "componentDidCatch",
+          "getSnapshotBeforeUpdate",
+        ],
       },
     ],
     "comma-dangle": Array [
@@ -240,6 +260,10 @@ Object {
     "function-call-argument-newline": Array [
       "error",
       "consistent",
+    ],
+    "function-paren-newline": Array [
+      "error",
+      "multiline-arguments",
     ],
     "generator-star-spacing": Array [
       "error",
@@ -536,8 +560,279 @@ Object {
     "init-declarations": Array [
       "off",
     ],
-    "jsx-quotes": Array [
+    "jsx-a11y/accessible-emoji": Array [
       "off",
+    ],
+    "jsx-a11y/alt-text": Array [
+      "error",
+      Object {
+        "area": Array [],
+        "elements": Array [
+          "img",
+          "object",
+          "area",
+          "input[type=\\"image\\"]",
+        ],
+        "img": Array [],
+        "input[type=\\"image\\"]": Array [],
+        "object": Array [],
+      },
+    ],
+    "jsx-a11y/anchor-has-content": Array [
+      "error",
+      Object {
+        "components": Array [],
+      },
+    ],
+    "jsx-a11y/anchor-is-valid": Array [
+      "error",
+      Object {
+        "aspects": Array [
+          "noHref",
+          "invalidHref",
+          "preferButton",
+        ],
+        "components": Array [
+          "Link",
+        ],
+        "specialLink": Array [
+          "to",
+        ],
+      },
+    ],
+    "jsx-a11y/aria-activedescendant-has-tabindex": Array [
+      "error",
+    ],
+    "jsx-a11y/aria-props": Array [
+      "error",
+    ],
+    "jsx-a11y/aria-proptypes": Array [
+      "error",
+    ],
+    "jsx-a11y/aria-role": Array [
+      "error",
+      Object {
+        "ignoreNonDOM": false,
+      },
+    ],
+    "jsx-a11y/aria-unsupported-elements": Array [
+      "error",
+    ],
+    "jsx-a11y/autocomplete-valid": Array [
+      "off",
+      Object {
+        "inputComponents": Array [],
+      },
+    ],
+    "jsx-a11y/click-events-have-key-events": Array [
+      "off",
+    ],
+    "jsx-a11y/control-has-associated-label": Array [
+      "error",
+      Object {
+        "controlComponents": Array [],
+        "depth": 5,
+        "ignoreElements": Array [
+          "audio",
+          "canvas",
+          "embed",
+          "input",
+          "textarea",
+          "tr",
+          "video",
+        ],
+        "ignoreRoles": Array [
+          "grid",
+          "listbox",
+          "menu",
+          "menubar",
+          "radiogroup",
+          "row",
+          "tablist",
+          "toolbar",
+          "tree",
+          "treegrid",
+        ],
+        "labelAttributes": Array [
+          "label",
+        ],
+      },
+    ],
+    "jsx-a11y/heading-has-content": Array [
+      "error",
+      Object {
+        "components": Array [
+          "",
+        ],
+      },
+    ],
+    "jsx-a11y/html-has-lang": Array [
+      "error",
+    ],
+    "jsx-a11y/iframe-has-title": Array [
+      "error",
+    ],
+    "jsx-a11y/img-redundant-alt": Array [
+      "error",
+    ],
+    "jsx-a11y/interactive-supports-focus": Array [
+      "error",
+    ],
+    "jsx-a11y/label-has-associated-control": Array [
+      "off",
+      Object {
+        "assert": "both",
+        "controlComponents": Array [],
+        "depth": 25,
+        "labelAttributes": Array [],
+        "labelComponents": Array [],
+      },
+    ],
+    "jsx-a11y/label-has-for": Array [
+      "off",
+      Object {
+        "allowChildren": false,
+        "components": Array [],
+        "required": Object {
+          "every": Array [
+            "nesting",
+            "id",
+          ],
+        },
+      },
+    ],
+    "jsx-a11y/lang": Array [
+      "error",
+    ],
+    "jsx-a11y/media-has-caption": Array [
+      "error",
+      Object {
+        "audio": Array [],
+        "track": Array [],
+        "video": Array [],
+      },
+    ],
+    "jsx-a11y/mouse-events-have-key-events": Array [
+      "error",
+    ],
+    "jsx-a11y/no-access-key": Array [
+      "error",
+    ],
+    "jsx-a11y/no-autofocus": Array [
+      "error",
+      Object {
+        "ignoreNonDOM": true,
+      },
+    ],
+    "jsx-a11y/no-distracting-elements": Array [
+      "error",
+      Object {
+        "elements": Array [
+          "marquee",
+          "blink",
+        ],
+      },
+    ],
+    "jsx-a11y/no-interactive-element-to-noninteractive-role": Array [
+      "error",
+      Object {
+        "tr": Array [
+          "none",
+          "presentation",
+        ],
+      },
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": Array [
+      "off",
+      Object {
+        "handlers": Array [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp",
+        ],
+      },
+    ],
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": Array [
+      "error",
+      Object {
+        "li": Array [
+          "menuitem",
+          "option",
+          "row",
+          "tab",
+          "treeitem",
+        ],
+        "ol": Array [
+          "listbox",
+          "menu",
+          "menubar",
+          "radiogroup",
+          "tablist",
+          "tree",
+          "treegrid",
+        ],
+        "table": Array [
+          "grid",
+        ],
+        "td": Array [
+          "gridcell",
+        ],
+        "ul": Array [
+          "listbox",
+          "menu",
+          "menubar",
+          "radiogroup",
+          "tablist",
+          "tree",
+          "treegrid",
+        ],
+      },
+    ],
+    "jsx-a11y/no-noninteractive-tabindex": Array [
+      "error",
+      Object {
+        "roles": Array [
+          "tabpanel",
+        ],
+        "tags": Array [],
+      },
+    ],
+    "jsx-a11y/no-onchange": Array [
+      "off",
+    ],
+    "jsx-a11y/no-redundant-roles": Array [
+      "error",
+    ],
+    "jsx-a11y/no-static-element-interactions": Array [
+      "off",
+      Object {
+        "handlers": Array [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp",
+        ],
+      },
+    ],
+    "jsx-a11y/role-has-required-aria-props": Array [
+      "error",
+    ],
+    "jsx-a11y/role-supports-aria-props": Array [
+      "error",
+    ],
+    "jsx-a11y/scope": Array [
+      "error",
+    ],
+    "jsx-a11y/tabindex-no-positive": Array [
+      "error",
+    ],
+    "jsx-quotes": Array [
+      "error",
       "prefer-double",
     ],
     "key-spacing": Array [
@@ -1317,7 +1612,9 @@ Object {
     "no-underscore-dangle": Array [
       "error",
       Object {
-        "allow": Array [],
+        "allow": Array [
+          "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__",
+        ],
         "allowAfterSuper": false,
         "allowAfterThis": false,
         "allowAfterThisConstructor": false,
@@ -1640,6 +1937,516 @@ Object {
     "radix": Array [
       "error",
     ],
+    "react/boolean-prop-naming": Array [
+      "off",
+      Object {
+        "message": "",
+        "propTypeNames": Array [
+          "bool",
+          "mutuallyExclusiveTrueProps",
+        ],
+        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+      },
+    ],
+    "react/button-has-type": Array [
+      "error",
+      Object {
+        "button": true,
+        "reset": false,
+        "submit": true,
+      },
+    ],
+    "react/default-props-match-prop-types": Array [
+      "error",
+      Object {
+        "allowRequiredDefaults": false,
+      },
+    ],
+    "react/destructuring-assignment": Array [
+      "error",
+      "always",
+    ],
+    "react/display-name": Array [
+      "off",
+      Object {
+        "ignoreTranspilerName": false,
+      },
+    ],
+    "react/forbid-component-props": Array [
+      "off",
+      Object {
+        "forbid": Array [],
+      },
+    ],
+    "react/forbid-dom-props": Array [
+      "off",
+      Object {
+        "forbid": Array [],
+      },
+    ],
+    "react/forbid-elements": Array [
+      "off",
+      Object {
+        "forbid": Array [],
+      },
+    ],
+    "react/forbid-foreign-prop-types": Array [
+      "warn",
+      Object {
+        "allowInPropTypes": true,
+      },
+    ],
+    "react/forbid-prop-types": Array [
+      "error",
+      Object {
+        "checkChildContextTypes": true,
+        "checkContextTypes": true,
+        "forbid": Array [
+          "any",
+          "array",
+          "object",
+        ],
+      },
+    ],
+    "react/function-component-definition": Array [
+      "error",
+      Object {
+        "namedComponents": "function-expression",
+        "unnamedComponents": "function-expression",
+      },
+    ],
+    "react/jsx-boolean-value": Array [
+      "error",
+      "never",
+      Object {
+        "always": Array [],
+      },
+    ],
+    "react/jsx-child-element-spacing": Array [
+      "off",
+    ],
+    "react/jsx-closing-bracket-location": Array [
+      "error",
+      "line-aligned",
+    ],
+    "react/jsx-closing-tag-location": Array [
+      "error",
+    ],
+    "react/jsx-curly-brace-presence": Array [
+      "error",
+      Object {
+        "children": "never",
+        "props": "never",
+      },
+    ],
+    "react/jsx-curly-newline": Array [
+      "error",
+      Object {
+        "multiline": "consistent",
+        "singleline": "consistent",
+      },
+    ],
+    "react/jsx-curly-spacing": Array [
+      "error",
+      "never",
+      Object {
+        "allowMultiline": true,
+      },
+    ],
+    "react/jsx-equals-spacing": Array [
+      "error",
+      "never",
+    ],
+    "react/jsx-filename-extension": Array [
+      "error",
+      Object {
+        "extensions": Array [
+          ".jsx",
+        ],
+      },
+    ],
+    "react/jsx-first-prop-new-line": Array [
+      "error",
+      "multiline-multiprop",
+    ],
+    "react/jsx-fragments": Array [
+      "error",
+      "syntax",
+    ],
+    "react/jsx-handler-names": Array [
+      "off",
+      Object {
+        "eventHandlerPrefix": "handle",
+        "eventHandlerPropPrefix": "on",
+      },
+    ],
+    "react/jsx-indent": Array [
+      "error",
+      2,
+    ],
+    "react/jsx-indent-props": Array [
+      "error",
+      2,
+    ],
+    "react/jsx-key": Array [
+      "off",
+    ],
+    "react/jsx-max-depth": Array [
+      "off",
+    ],
+    "react/jsx-max-props-per-line": Array [
+      "error",
+      Object {
+        "maximum": 1,
+        "when": "multiline",
+      },
+    ],
+    "react/jsx-newline": Array [
+      "off",
+    ],
+    "react/jsx-no-bind": Array [
+      "error",
+      Object {
+        "allowArrowFunctions": true,
+        "allowBind": false,
+        "allowFunctions": false,
+        "ignoreDOMComponents": true,
+        "ignoreRefs": true,
+      },
+    ],
+    "react/jsx-no-comment-textnodes": Array [
+      "error",
+    ],
+    "react/jsx-no-constructed-context-values": Array [
+      "error",
+    ],
+    "react/jsx-no-duplicate-props": Array [
+      "error",
+      Object {
+        "ignoreCase": true,
+      },
+    ],
+    "react/jsx-no-literals": Array [
+      "off",
+      Object {
+        "noStrings": true,
+      },
+    ],
+    "react/jsx-no-script-url": Array [
+      "error",
+      Array [
+        Object {
+          "name": "Link",
+          "props": Array [
+            "to",
+          ],
+        },
+      ],
+    ],
+    "react/jsx-no-target-blank": Array [
+      "error",
+      Object {
+        "enforceDynamicLinks": "always",
+        "forms": false,
+        "links": true,
+      },
+    ],
+    "react/jsx-no-undef": Array [
+      "error",
+    ],
+    "react/jsx-no-useless-fragment": Array [
+      "error",
+    ],
+    "react/jsx-one-expression-per-line": Array [
+      "error",
+      Object {
+        "allow": "single-child",
+      },
+    ],
+    "react/jsx-pascal-case": Array [
+      "error",
+      Object {
+        "allowAllCaps": true,
+        "ignore": Array [],
+      },
+    ],
+    "react/jsx-props-no-multi-spaces": Array [
+      "error",
+    ],
+    "react/jsx-props-no-spreading": Array [
+      "error",
+      Object {
+        "custom": "enforce",
+        "exceptions": Array [],
+        "explicitSpread": "ignore",
+        "html": "enforce",
+      },
+    ],
+    "react/jsx-sort-default-props": Array [
+      "off",
+      Object {
+        "ignoreCase": true,
+      },
+    ],
+    "react/jsx-sort-prop-types": Array [
+      "off",
+    ],
+    "react/jsx-sort-props": Array [
+      "off",
+      Object {
+        "callbacksLast": false,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true,
+        "shorthandFirst": false,
+        "shorthandLast": false,
+      },
+    ],
+    "react/jsx-space-before-closing": Array [
+      "off",
+      "always",
+    ],
+    "react/jsx-tag-spacing": Array [
+      "error",
+      Object {
+        "afterOpening": "never",
+        "beforeClosing": "never",
+        "beforeSelfClosing": "always",
+        "closingSlash": "never",
+      },
+    ],
+    "react/jsx-uses-react": Array [
+      "error",
+    ],
+    "react/jsx-uses-vars": Array [
+      "error",
+    ],
+    "react/jsx-wrap-multilines": Array [
+      "error",
+      Object {
+        "arrow": "parens-new-line",
+        "assignment": "parens-new-line",
+        "condition": "parens-new-line",
+        "declaration": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line",
+        "return": "parens-new-line",
+      },
+    ],
+    "react/no-access-state-in-setstate": Array [
+      "error",
+    ],
+    "react/no-adjacent-inline-elements": Array [
+      "off",
+    ],
+    "react/no-array-index-key": Array [
+      "error",
+    ],
+    "react/no-arrow-function-lifecycle": Array [
+      "error",
+    ],
+    "react/no-children-prop": Array [
+      "error",
+    ],
+    "react/no-danger": Array [
+      "warn",
+    ],
+    "react/no-danger-with-children": Array [
+      "error",
+    ],
+    "react/no-deprecated": Array [
+      "error",
+    ],
+    "react/no-did-mount-set-state": Array [
+      "off",
+    ],
+    "react/no-did-update-set-state": Array [
+      "error",
+    ],
+    "react/no-direct-mutation-state": Array [
+      "off",
+    ],
+    "react/no-find-dom-node": Array [
+      "error",
+    ],
+    "react/no-invalid-html-attribute": Array [
+      "error",
+    ],
+    "react/no-is-mounted": Array [
+      "error",
+    ],
+    "react/no-multi-comp": Array [
+      "off",
+    ],
+    "react/no-namespace": Array [
+      "error",
+    ],
+    "react/no-redundant-should-component-update": Array [
+      "error",
+    ],
+    "react/no-render-return-value": Array [
+      "error",
+    ],
+    "react/no-set-state": Array [
+      "off",
+    ],
+    "react/no-string-refs": Array [
+      "error",
+    ],
+    "react/no-this-in-sfc": Array [
+      "error",
+    ],
+    "react/no-typos": Array [
+      "error",
+    ],
+    "react/no-unescaped-entities": Array [
+      "error",
+    ],
+    "react/no-unknown-property": Array [
+      "error",
+    ],
+    "react/no-unsafe": Array [
+      "off",
+    ],
+    "react/no-unstable-nested-components": Array [
+      "error",
+    ],
+    "react/no-unused-class-component-methods": Array [
+      "error",
+    ],
+    "react/no-unused-prop-types": Array [
+      "error",
+      Object {
+        "customValidators": Array [],
+        "skipShapeProps": true,
+      },
+    ],
+    "react/no-unused-state": Array [
+      "error",
+    ],
+    "react/no-will-update-set-state": Array [
+      "error",
+    ],
+    "react/prefer-es6-class": Array [
+      "error",
+      "always",
+    ],
+    "react/prefer-exact-props": Array [
+      "error",
+    ],
+    "react/prefer-read-only-props": Array [
+      "off",
+    ],
+    "react/prefer-stateless-function": Array [
+      "error",
+      Object {
+        "ignorePureComponents": true,
+      },
+    ],
+    "react/prop-types": Array [
+      "error",
+      Object {
+        "customValidators": Array [],
+        "ignore": Array [],
+        "skipUndeclared": false,
+      },
+    ],
+    "react/react-in-jsx-scope": Array [
+      "error",
+    ],
+    "react/require-default-props": Array [
+      "error",
+      Object {
+        "forbidDefaultForRequired": true,
+      },
+    ],
+    "react/require-optimization": Array [
+      "off",
+      Object {
+        "allowDecorators": Array [],
+      },
+    ],
+    "react/require-render-return": Array [
+      "error",
+    ],
+    "react/self-closing-comp": Array [
+      "error",
+    ],
+    "react/sort-comp": Array [
+      "error",
+      Object {
+        "groups": Object {
+          "lifecycle": Array [
+            "displayName",
+            "propTypes",
+            "contextTypes",
+            "childContextTypes",
+            "mixins",
+            "statics",
+            "defaultProps",
+            "constructor",
+            "getDefaultProps",
+            "getInitialState",
+            "state",
+            "getChildContext",
+            "getDerivedStateFromProps",
+            "componentWillMount",
+            "UNSAFE_componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "UNSAFE_componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "UNSAFE_componentWillUpdate",
+            "getSnapshotBeforeUpdate",
+            "componentDidUpdate",
+            "componentDidCatch",
+            "componentWillUnmount",
+          ],
+          "rendering": Array [
+            "/^render.+$/",
+            "render",
+          ],
+        },
+        "order": Array [
+          "static-variables",
+          "static-methods",
+          "instance-variables",
+          "lifecycle",
+          "/^handle.+$/",
+          "/^on.+$/",
+          "getters",
+          "setters",
+          "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+          "instance-methods",
+          "everything-else",
+          "rendering",
+        ],
+      },
+    ],
+    "react/sort-prop-types": Array [
+      "off",
+      Object {
+        "callbacksLast": false,
+        "ignoreCase": true,
+        "requiredFirst": false,
+        "sortShapeProp": true,
+      },
+    ],
+    "react/state-in-constructor": Array [
+      "error",
+      "always",
+    ],
+    "react/static-property-placement": Array [
+      "error",
+      "property assignment",
+    ],
+    "react/style-prop-object": Array [
+      "error",
+    ],
+    "react/void-dom-elements-no-children": Array [
+      "error",
+    ],
     "require-atomic-updates": Array [
       "off",
     ],
@@ -1827,11 +2634,20 @@ Object {
     "import/resolver": Object {
       "node": Object {
         "extensions": Array [
-          ".mjs",
           ".js",
+          ".jsx",
           ".json",
         ],
       },
+    },
+    "propWrapperFunctions": Array [
+      "forbidExtraProps",
+      "exact",
+      "Object.freeze",
+    ],
+    "react": Object {
+      "pragma": "React",
+      "version": "detect",
     },
   },
 }

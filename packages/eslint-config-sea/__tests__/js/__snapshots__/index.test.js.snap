@@ -241,6 +241,10 @@ Object {
       "error",
       "consistent",
     ],
+    "function-paren-newline": Array [
+      "error",
+      "multiline-arguments",
+    ],
     "generator-star-spacing": Array [
       "error",
       Object {
