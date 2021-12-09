@@ -21,6 +21,8 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 }
 ```
 
+> 注意: 这里省略了 `eslint-config-` 前缀，是因为它会被 eslint 自动补充。
+
 ### react
 
 ```bash
