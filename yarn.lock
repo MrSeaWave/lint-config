@@ -5665,7 +5665,7 @@ lodash.truncate@^4.4.2:
   resolved "https://npm.baoyun.ltd/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.17.15, lodash@^4.17.19, lodash@^4.7.0:
+lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://npm.baoyun.ltd/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -6656,6 +6656,11 @@ postcss-safe-parser@^6.0.0:
   resolved "https://npm.baoyun.ltd/postcss-safe-parser/-/postcss-safe-parser-6.0.0.tgz#bb4c29894171a94bc5c996b9a30317ef402adaa1"
   integrity sha1-u0wpiUFxqUvFyZa5owMX70Aq2qE=
 
+postcss-scss@^4.0.2:
+  version "4.0.2"
+  resolved "https://npm.baoyun.ltd/postcss-scss/-/postcss-scss-4.0.2.tgz#39ddcc0ab32f155d5ab328ee91353d67a52d537b"
+  integrity sha1-Od3MCrMvFV1asyjukTU9Z6UtU3s=
+
 postcss-selector-parser@^6.0.6:
   version "6.0.7"
   resolved "https://npm.baoyun.ltd/postcss-selector-parser/-/postcss-selector-parser-6.0.7.tgz#48404830a635113a71fd79397de8209ed05a66fc"
@@ -7596,10 +7601,27 @@ style-search@^0.1.0:
   resolved "https://npm.baoyun.ltd/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
+stylelint-config-recommended-scss@^5.0.2:
+  version "5.0.2"
+  resolved "https://npm.baoyun.ltd/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-5.0.2.tgz#193f483861c76a36ece24c52eb6baca4838f4a48"
+  integrity sha1-GT9IOGHHajbs4kxS62uspIOPSkg=
+  dependencies:
+    postcss-scss "^4.0.2"
+    stylelint-config-recommended "^6.0.0"
+    stylelint-scss "^4.0.0"
+
 stylelint-config-recommended@^6.0.0:
   version "6.0.0"
   resolved "https://npm.baoyun.ltd/stylelint-config-recommended/-/stylelint-config-recommended-6.0.0.tgz#fd2523a322836005ad9bf473d3e5534719c09f9d"
   integrity sha1-/SUjoyKDYAWtm/Rz0+VTRxnAn50=
+
+stylelint-config-standard-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.baoyun.ltd/stylelint-config-standard-scss/-/stylelint-config-standard-scss-3.0.0.tgz#dafc4fa5538d0ed833bf0a7d391e075683ffd96c"
+  integrity sha1-2vxPpVONDtgzvwp9OR4HVoP/2Ww=
+  dependencies:
+    stylelint-config-recommended-scss "^5.0.2"
+    stylelint-config-standard "^24.0.0"
 
 stylelint-config-standard@^24.0.0:
   version "24.0.0"
@@ -7607,6 +7629,17 @@ stylelint-config-standard@^24.0.0:
   integrity sha1-aCPyB6uZeuC2QfmmNtAHzETXdUE=
   dependencies:
     stylelint-config-recommended "^6.0.0"
+
+stylelint-scss@^4.0.0:
+  version "4.0.1"
+  resolved "https://npm.baoyun.ltd/stylelint-scss/-/stylelint-scss-4.0.1.tgz#da03f687c5bf8b91ea40d389ad29e07c328582b1"
+  integrity sha512-Ea+KY7ZFsDhU6Ne9r84y7NvFSNA843w352MSdQeDmklar0pDbeQj9flKrVAuDIlK0pDDdhFtgBl/N0FrtWHq0g==
+  dependencies:
+    lodash "^4.17.21"
+    postcss-media-query-parser "^0.2.3"
+    postcss-resolve-nested-selector "^0.1.1"
+    postcss-selector-parser "^6.0.6"
+    postcss-value-parser "^4.1.0"
 
 stylelint@^14.1.0:
   version "14.1.0"

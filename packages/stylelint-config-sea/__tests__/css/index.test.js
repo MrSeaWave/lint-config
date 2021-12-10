@@ -1,5 +1,4 @@
 const stylelint = require('stylelint');
-const fs = require('fs');
 const config = require('../../index');
 const path = require('path');
 
