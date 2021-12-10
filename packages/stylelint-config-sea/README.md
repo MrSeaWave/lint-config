@@ -24,6 +24,8 @@ yarn add stylelint stylelint-config-sea -D
 yarn add stylelint stylelint-config-sea -D
 ```
 
+如果使用时报错，你可能还需要安装 `postcss-scss` & `postcss` 至 `devDependencies`
+
 在你的`.stylelintrc.json`文件中修改为：
 
 ```json
