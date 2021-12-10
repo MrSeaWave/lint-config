@@ -2,7 +2,7 @@
   "name": "stylelint-config-sea",
   "version": "0.1.0",
   "description": "Sea's stylelint config",
-  "keywords": [],
+  "keywords": ["stylelint","sea","scss"],
   "author": "MrSeaWave <MrDaemon@outlook.com>",
   "license": "MIT",
   "main": "index.js",
