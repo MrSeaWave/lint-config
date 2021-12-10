@@ -6,6 +6,11 @@
   "author": "MrSeaWave <MrDaemon@outlook.com>",
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "scss.js",
+    "rules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrSeaWave/lint-config.git"

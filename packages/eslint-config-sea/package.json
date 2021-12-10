@@ -11,6 +11,12 @@
   "author": "Sea <MrDaemon@outlook.com>",
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "rules",
+    "index.js",
+    "react.js",
+    "hooks.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/MrSeaWave/lint-config.git"
