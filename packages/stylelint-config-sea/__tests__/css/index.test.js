@@ -41,7 +41,7 @@ describe('stylelint-config-sea with invalid css', () => {
 
   it('flags one warning', async () => {
     const data = await result;
-    expect(data.results[0].warnings).toHaveLength(2);
+    expect(data.results[0].warnings).toHaveLength(1);
   });
 
   it('correct warning text', () => {
@@ -61,10 +61,10 @@ describe('stylelint-config-sea with invalid css', () => {
   });
 
   it('correct line number', () => {
-    return result.then((data) => expect(data.results[0].warnings[0].line).toBe(2));
+    return result.then((data) => expect(data.results[0].warnings[0].line).toBe(3));
   });
 
   it('correct column number', () => {
-    return result.then((data) => expect(data.results[0].warnings[0].column).toBe(10));
+    return result.then((data) => expect(data.results[0].warnings[0].column).toBe(8));
   });
 });
