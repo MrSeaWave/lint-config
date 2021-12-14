@@ -1,4 +1,6 @@
 module.exports = {
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
   projects: [
     {
       displayName: '测试文件',

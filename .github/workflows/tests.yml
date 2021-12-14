@@ -1,6 +1,10 @@
-name: 'CI 🎨'
+name: 'TESTS 🎨'
 
 on: [push, pull_request]
+
+#on:
+#  pull_request:
+#    branches: main
 
 jobs:
   check:
@@ -35,3 +39,7 @@ jobs:
         run: yarn install
       - name: run test
         run: npm run test
+      - name: upload coverage report to codeCov
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: true
