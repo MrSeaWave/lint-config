@@ -44,7 +44,7 @@ const getMds = (allVersion = false) => {
   const TARGET_DIRECTORY = path.join(__dirname, '../packages');
   const packageFolders = fs.readdirSync(TARGET_DIRECTORY).filter((filename) => filename[0] !== '.');
   console.log('packageFolders', packageFolders);
-  packageFolders.for((packageFolder) => {
+  packageFolders.forEach((packageFolder) => {
     const directory = path.join(TARGET_DIRECTORY, packageFolder);
     const packageInfoPath = path.join(directory, 'package.json');
     // eslint-disable-next-line no-unused-vars
@@ -55,7 +55,7 @@ const getMds = (allVersion = false) => {
     const pkgName = info.name;
 
     console.log('versions', versions);
-    versions.for((version) => {
+    versions.forEach((version) => {
       const versionPkg = `${pkgName}@${version}`;
       const changeLog = getChangelog(content, version);
       if (!changeLog) {
