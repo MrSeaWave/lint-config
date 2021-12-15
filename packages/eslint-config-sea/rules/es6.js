@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['promise'],
   rules: {
-    // 在 JavaScript 中创建一个只有属性 setter 的对象是一个常见的错误，但从来没有为它定义相应的 getter 。没有读取器，你不能读取属性，所以它最终不会被使用。
+    // 在 JavaScript 中创建一个只有属性  setter  的对象是一个常见的错误，但从来没有为它定义相应的 getter 。没有读取器，你不能读取属性，所以它最终不会被使用。
     'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: true }],
     // 使用分号
     semi: ['error', 'always'],
