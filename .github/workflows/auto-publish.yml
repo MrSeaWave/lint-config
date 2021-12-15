@@ -1,0 +1,63 @@
+# 自动发布
+name: Auto Publish
+
+# https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/**/*.js'
+      - '**/package*.json'
+
+jobs:
+  auto-publish:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          # 0 indicates all history for all branches and tags.
+          fetch-depth: '0'
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+
+      - name: Global install Yarn 🔨
+        run: npm install -g yarn
+      - name: Print Env 📄
+        run: |
+          echo "node"
+          node -v
+          echo "npm"
+          npm -v
+          echo "yarn"
+          yarn -v
+      - name: Install dependencies 📦️
+        run: yarn install
+
+      - name: Setup credentials
+        # 仅是为了区分，暂无其他作用
+        run: |
+          git config --global user.email action@github.com
+          git config --global user.name GitHub Action
+        # run: |
+        #   git config --global user.email MrDaemon@outlook.com
+        #   git config --global user.name Sea
+
+      - name: Publish 🚀
+        # https://github.com/lerna/lerna/issues/2788
+        run: npm run release -- --yes --no-verify-access
+        # https://github.com/lerna/lerna/issues/2404
+        # 登录 npmjs.com 后，找到个人中心菜单里面的 “Access Tokens” 菜单，然后点击右上角的 “Generate New Token” 生成 token 按钮
+        # 注：npm access token 有三种，但只有 publish 权限且可绕过 2FA 的只有 automation token。
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,13 +1,13 @@
-name: 'TESTS CI'
+name: Create Release Pkgs
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_run:
+    workflows: [Auto Publish]
+    types:
+      - completed
 
 jobs:
-  test-ci:
+  create-release:
     runs-on: ubuntu-latest
 
     strategy:
@@ -33,12 +33,10 @@ jobs:
           npm -v
           echo "yarn"
           yarn -v
-
       - name: install dependencies
         run: yarn install
-      - name: run test
-        run: npm run test
-      - name: upload coverage report to codeCov
-        uses: codecov/codecov-action@v2
-        with:
-          fail_ci_if_error: true
+
+      - name: deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        run: npm run createRelease
