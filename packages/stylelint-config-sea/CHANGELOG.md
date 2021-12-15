@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/MrSeaWave/lint-config/compare/stylelint-config-sea@0.1.0...stylelint-config-sea@0.2.0) (2021-12-15)
+
+### Features
+
+- 针对 package.json 增加一些 key ([6ee455d](https://github.com/MrSeaWave/lint-config/commit/6ee455dcc15ca682aa17a12df484a6b9c110a62f))
+
 # 0.1.0 (2021-12-10)
 
 ### Features
