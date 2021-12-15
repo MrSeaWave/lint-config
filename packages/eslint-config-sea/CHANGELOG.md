@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/MrSeaWave/lint-config/compare/eslint-config-sea@0.2.1...eslint-config-sea@0.2.2) (2021-12-15)
+
+### Bug Fixes
+
+- 注释修改 ([f087f2e](https://github.com/MrSeaWave/lint-config/commit/f087f2e3ae89dad5ea34595001eb71bab74343b9))
+
 ## [0.2.1](https://github.com/MrSeaWave/lint-config/compare/eslint-config-sea@0.2.0...eslint-config-sea@0.2.1) (2021-12-15)
 
 **Note:** Version bump only for package eslint-config-sea
