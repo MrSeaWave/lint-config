@@ -63,7 +63,7 @@ const getMds = (allVersion = false) => {
       }
       const releaseData = {
         owner: 'MrSeaWave',
-        repo: 'lerna-demo',
+        repo: 'lint-config',
         tag_name: versionPkg,
         name: versionPkg,
         body: changeLog,
