@@ -20,7 +20,7 @@ module.exports = {
         functions: 'never',
       },
     ],
-    // 将 switch 语句中的default子句强制为最后一个子句
+    // 将 switch 语句中的 default 子句强制为最后一个子句
     'default-case-last': 'error',
     // 要求或禁止在三元操作数中间换行
     'multiline-ternary': ['error', 'always-multiline'],
