@@ -1,0 +1,50 @@
+{
+  "name": "@sea-org/eslint-config-js",
+  "version": "1.0.0",
+  "description": "Sea's JS eslint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "js",
+    "sea"
+  ],
+  "author": "Sea <MrDaemon@outlook.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrSeaWave/lint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrSeaWave/lint-config/issues"
+  },
+  "homepage": "https://github.com/MrSeaWave/lint-config#readme",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "eslint": "^8.4.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
+}

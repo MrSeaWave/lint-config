@@ -59,5 +59,7 @@ module.exports = {
     ],
     // Enforce consistent param names when creating new promises
     'promise/param-names': 'error',
+    // 当有更简单的结构可以代替三元操作符时，该规则禁止使用三元操作符。
+    'no-unneeded-ternary': 'error',
   },
 };
