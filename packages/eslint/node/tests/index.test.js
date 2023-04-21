@@ -1,7 +1,5 @@
 const { ESLint } = require('eslint');
 
-// https://github.com/eslint/eslint/blob/main/tests/lib/rule-tester/flat-rule-tester.js
-
 describe('eslint-config-sea js', () => {
   it('rules snapshot', async () => {
     // 创建一个实例。

@@ -1,12 +1,14 @@
 {
-  "name": "eslint-config-sea-js",
+  "name": "eslint-config-sea-node",
   "version": "1.0.0",
-  "description": "Sea's JS eslint config",
+  "description": "Sea's NodeJS eslint config",
   "keywords": [
     "eslint",
     "eslintconfig",
     "config",
     "js",
+    "node",
+    "nodejs",
     "sea"
   ],
   "author": "Sea <MrDaemon@outlook.com>",
@@ -25,13 +27,12 @@
   },
   "dependencies": {
     "eslint": "^8.38.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-n": "^15.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
-    "@babel/preset-env": "^7.16.4"
+    "@babel/preset-env": "^7.16.4",
+    "eslint-config-sea-js": "workspace:^1.0.0"
   }
 }

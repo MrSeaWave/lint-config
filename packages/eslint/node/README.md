@@ -1,22 +1,20 @@
-# `eslint-config-sea-js`
+# `eslint-config-sea-node`
 
-该配置文件基于 eslint-config-airbnb（-base），并在其基础上做出一点小改动
-
-> eslint-config-sea-js 包含 ECMAScript 6 + 的 ESLint 代码规范。
+本规则只单独针对 node 环境, 请搭配 `eslint-config-sea-js` 一起使用
 
 ## Usage
 
 ### js
 
 ```bash
-pnpm add eslint-config-sea-js -D
+pnpm add eslint-config-sea-node eslint-config-sea-js -D
 ```
 
 在`.eslintrc`文件中增加
 
 ```json
 {
-  "extends": [...,"sea-js"]
+  "extends": [...,"sea-js","sea-node"]
 }
 ```
 
@@ -35,10 +33,9 @@ pnpm add eslint-config-sea-js -D
 ## 规则
 
 - [eslint](https://github.com/eslint/eslint/tree/main/docs/rules)
-- [import](https://github.com/benmosher/eslint-plugin-import/tree/main/docs/rules)
+- [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)
 - [airbnb](https://github.com/airbnb/javascript)
 - [standard](https://github.com/standard/eslint-config-standard)
-- [standard-react](https://github.com/standard/eslint-config-standard-react)
 
 ## Contributing
 

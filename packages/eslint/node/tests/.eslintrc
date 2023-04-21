@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": ["sea-js", "../index.js"],
+  "env": {
+    "jest": true
+  }
+}

@@ -7,21 +7,72 @@ Object {
     "jest": true,
     "node": true,
   },
-  "globals": Object {},
+  "globals": Object {
+    "ArrayBuffer": "readonly",
+    "Atomics": "readonly",
+    "BigInt": "readonly",
+    "BigInt64Array": "readonly",
+    "BigUint64Array": "readonly",
+    "Buffer": "readonly",
+    "DataView": "readonly",
+    "Float32Array": "readonly",
+    "Float64Array": "readonly",
+    "GLOBAL": "readonly",
+    "Int16Array": "readonly",
+    "Int32Array": "readonly",
+    "Int8Array": "readonly",
+    "Intl": "readonly",
+    "Map": "readonly",
+    "Promise": "readonly",
+    "Proxy": "readonly",
+    "Reflect": "readonly",
+    "Set": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "Symbol": "readonly",
+    "TextDecoder": "readonly",
+    "TextEncoder": "readonly",
+    "URL": "readonly",
+    "URLSearchParams": "readonly",
+    "Uint16Array": "readonly",
+    "Uint32Array": "readonly",
+    "Uint8Array": "readonly",
+    "Uint8ClampedArray": "readonly",
+    "WeakMap": "readonly",
+    "WeakSet": "readonly",
+    "WebAssembly": "readonly",
+    "__dirname": "readonly",
+    "__filename": "readonly",
+    "clearImmediate": "readonly",
+    "clearInterval": "readonly",
+    "clearTimeout": "readonly",
+    "console": "readonly",
+    "exports": "writable",
+    "global": "readonly",
+    "globalThis": "readonly",
+    "module": "readonly",
+    "process": "readonly",
+    "queueMicrotask": "readonly",
+    "require": "readonly",
+    "root": "readonly",
+    "setImmediate": "readonly",
+    "setInterval": "readonly",
+    "setTimeout": "readonly",
+  },
   "ignorePatterns": Array [],
   "noInlineConfig": undefined,
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "generators": false,
+      "globalReturn": true,
       "objectLiteralDuplicateProperties": false,
     },
-    "ecmaVersion": 2018,
-    "sourceType": "module",
+    "ecmaVersion": 2019,
+    "sourceType": "script",
   },
   "plugins": Array [
     "import",
     "promise",
-    "node",
+    "n",
   ],
   "reportUnusedDisableDirectives": undefined,
   "rules": Object {
@@ -354,6 +405,7 @@ Object {
     "import/no-cycle": Array [
       "error",
       Object {
+        "allowUnsafeDynamicCyclicDependency": false,
         "ignoreExternal": false,
         "maxDepth": "∞",
       },
@@ -476,6 +528,7 @@ Object {
     "import/order": Array [
       "error",
       Object {
+        "distinctGroup": true,
         "groups": Array [
           Array [
             "builtin",
@@ -659,6 +712,67 @@ Object {
       "error",
       "always-multiline",
     ],
+    "n/handle-callback-err": Array [
+      "error",
+      "^(err|error)$",
+    ],
+    "n/no-callback-literal": Array [
+      "error",
+    ],
+    "n/no-deprecated-api": Array [
+      "error",
+    ],
+    "n/no-exports-assign": Array [
+      "error",
+    ],
+    "n/no-extraneous-import": Array [
+      "error",
+    ],
+    "n/no-extraneous-require": Array [
+      "error",
+    ],
+    "n/no-missing-import": Array [
+      "error",
+    ],
+    "n/no-missing-require": Array [
+      "error",
+    ],
+    "n/no-new-require": Array [
+      "error",
+    ],
+    "n/no-path-concat": Array [
+      "error",
+    ],
+    "n/no-process-exit": Array [
+      "error",
+    ],
+    "n/no-unpublished-bin": Array [
+      "error",
+    ],
+    "n/no-unpublished-import": Array [
+      "error",
+    ],
+    "n/no-unpublished-require": Array [
+      "error",
+    ],
+    "n/no-unsupported-features/es-builtins": Array [
+      "error",
+    ],
+    "n/no-unsupported-features/es-syntax": Array [
+      "error",
+      Object {
+        "ignores": Array [],
+      },
+    ],
+    "n/no-unsupported-features/node-builtins": Array [
+      "error",
+    ],
+    "n/process-exit-as-throw": Array [
+      "error",
+    ],
+    "n/shebang": Array [
+      "error",
+    ],
     "new-cap": Array [
       "error",
       Object {
@@ -729,6 +843,7 @@ Object {
       "error",
       Object {
         "allowParens": true,
+        "onlyOneSimpleParam": false,
       },
     ],
     "no-console": Array [
@@ -1325,6 +1440,9 @@ Object {
         "allowAfterThis": false,
         "allowAfterThisConstructor": false,
         "allowFunctionParams": true,
+        "allowInArrayDestructuring": true,
+        "allowInObjectDestructuring": true,
+        "enforceInClassFields": false,
         "enforceInMethodNames": true,
       },
     ],
@@ -1445,28 +1563,6 @@ Object {
       "error",
     ],
     "no-with": Array [
-      "error",
-    ],
-    "node/handle-callback-err": Array [
-      "error",
-      "^(err|error)$",
-    ],
-    "node/no-callback-literal": Array [
-      "error",
-    ],
-    "node/no-deprecated-api": Array [
-      "error",
-    ],
-    "node/no-exports-assign": Array [
-      "error",
-    ],
-    "node/no-new-require": Array [
-      "error",
-    ],
-    "node/no-path-concat": Array [
-      "error",
-    ],
-    "node/process-exit-as-throw": Array [
       "error",
     ],
     "nonblock-statement-body-position": Array [
