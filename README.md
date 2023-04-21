@@ -22,5 +22,7 @@
   /></a>
 </p>
 
+> 本项目是为了聚合个人配置规则
+
 - [eslint-config-sea](./packages/eslint-config-sea): 个人 eslint 配置
 - [stylelint-config-sea](./packages/stylelint-config-sea): 个人 stylelint 配置
