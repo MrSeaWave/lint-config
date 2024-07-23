@@ -1,6 +1,7 @@
-const { ESLint } = require('eslint');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
 
-describe('eslint-config-sea js', () => {
+describe('eslint-config-sea node js', () => {
   it('rules snapshot', async () => {
     // 创建一个实例。
     const eslint = new ESLint({ cwd: __dirname });
@@ -22,7 +23,7 @@ describe('eslint-config-sea js', () => {
     const resultText = formatter.format(results);
 
     //  输出到控制台。
-    console.log(resultText);
+    console.log('resultText', resultText);
 
     console.log('results', results);
 
