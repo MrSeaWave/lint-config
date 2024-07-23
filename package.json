@@ -17,7 +17,7 @@
   "scripts": {
     "release": "lerna publish",
     "createRelease": "node ./scripts/createRelease.js",
-    "postinstall": "husky install",
+    "prepare": "husky",
     "clean-local": "rimraf --glob '**/node_modules'"
   },
   "devDependencies": {
