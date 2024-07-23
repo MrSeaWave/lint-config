@@ -1,4 +1,5 @@
-const { ESLint } = require('eslint');
+import { ESLint } from 'eslint';
+import { describe, expect, it } from 'vitest';
 
 // https://github.com/eslint/eslint/blob/main/tests/lib/rule-tester/flat-rule-tester.js
 
