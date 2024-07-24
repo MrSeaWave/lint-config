@@ -1,6 +1,7 @@
 # `eslint-config-sea`
 
-该配置文件基于 eslint-config-airbnb（-base），并在其基础上做出一点小改动
+该配置文件基于 eslint-config-airbnb（-base），并在其基础上做出一点小改动,
+包括 js,react, ts 等规则
 
 > eslint-config-airbnb 包含 ECMAScript 6 + 以及 React 的 ESLint 代码规范。
 > 如果项目不是 React 的话，可以选择 eslint-config-airbnb-base。

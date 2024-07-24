@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-sea-rcmd",
-  "version": "0.2.3",
-  "description": "Sea's eslint config",
+  "name": "eslint-config-sea-react",
+  "version": "0.0.1",
+  "description": "Sea's eslint react config",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -20,9 +20,7 @@
   "main": "index.js",
   "files": [
     "rules",
-    "index.js",
-    "react.js",
-    "hooks.js"
+    "index.js"
   ],
   "repository": {
     "type": "git",
@@ -36,7 +34,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^19.0.2"
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -53,10 +55,6 @@
     "react": "^17.0.2"
   },
   "peerDependencies": {
-    "eslint": "^8.4.1",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint": "^8.4.1"
   }
 }

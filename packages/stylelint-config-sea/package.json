@@ -9,6 +9,12 @@
     "style"
   ],
   "author": "MrSeaWave <MrDaemon@outlook.com>",
+  "contributors": [
+    {
+      "name": "Sea",
+      "email": "MrDaemon@outlook.com"
+    }
+  ],
   "license": "MIT",
   "main": "index.js",
   "files": [
