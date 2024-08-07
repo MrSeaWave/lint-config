@@ -61,5 +61,7 @@ module.exports = {
     'promise/param-names': 'error',
     // 当有更简单的结构可以代替三元操作符时，该规则禁止使用三元操作符。
     'no-unneeded-ternary': 'error',
+    // ==========================  关闭 eslint 格式检查 ==========================
+    'comma-dangle': 'off',
   },
 };
