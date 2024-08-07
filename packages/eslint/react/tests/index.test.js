@@ -1,5 +1,5 @@
-const path = require('path');
-const { ESLint } = require('eslint');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
 
 describe('eslint-config-sea react', () => {
   it('rules snapshot', async () => {
@@ -19,7 +19,7 @@ describe('eslint-config-sea react', () => {
     // 创建一个实例。
     const eslint = new ESLint({ cwd: __dirname });
     // Lint 文件
-    const results = await eslint.lintFiles(['./index.js']);
+    const results = await eslint.lintFiles(['./index.jsx']);
 
     // 格式化结果。
     const formatter = await eslint.loadFormatter('stylish');

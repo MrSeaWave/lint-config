@@ -1,9 +1,6 @@
 module.exports = {
   root: true,
-  extends: '../../react.js',
-  env: {
-    jest: true,
-  },
+  extends: '../index.js',
   parser: '@babel/eslint-parser',
   parserOptions: {
     babelOptions: {

@@ -1,6 +1,6 @@
-const path = require('path');
-const { ESLint } = require('eslint');
-const baseConfig = require('./hook.eslintrc');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
+import baseConfig from './hook.eslintrc';
 
 describe('eslint-config-sea react-hook', () => {
   it('rules snapshot', async () => {
