@@ -1,11 +1,11 @@
-const path = require('path');
-const { ESLint } = require('eslint');
-const baseConfig = require('./hook.eslintrc');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
 
-describe('eslint-config-sea react-hook', () => {
+describe('eslint-config-sea', () => {
   it('rules snapshot', async () => {
+    console.log('----------->');
     // 创建一个实例。
-    const eslint = new ESLint({ cwd: __dirname, baseConfig, useEslintrc: false });
+    const eslint = new ESLint({ cwd: __dirname });
     // 计算给定文件的config配置
     const result = await eslint.calculateConfigForFile(__filename);
 
@@ -16,11 +16,11 @@ describe('eslint-config-sea react-hook', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('lint react hook files', async () => {
+  it('lint react files', async () => {
     // 创建一个实例。
-    const eslint = new ESLint({ cwd: __dirname, baseConfig, useEslintrc: false });
+    const eslint = new ESLint({ cwd: __dirname });
     // Lint 文件
-    const results = await eslint.lintFiles(['./hook.jsx']);
+    const results = await eslint.lintFiles(['./fixtures/src/App.tsx']);
 
     // 格式化结果。
     const formatter = await eslint.loadFormatter('stylish');

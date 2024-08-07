@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: '../../react.js',
+  extends: '../index.js',
   env: {
     jest: true,
   },

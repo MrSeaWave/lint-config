@@ -4,14 +4,13 @@
 包括 js,react, ts 等规则
 
 > eslint-config-airbnb 包含 ECMAScript 6 + 以及 React 的 ESLint 代码规范。
-> 如果项目不是 React 的话，可以选择 eslint-config-airbnb-base。
 
 ## Usage
 
 ### js
 
 ```bash
-yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import -D
+pnpm add eslint eslint-config-sea-D
 ```
 
 在你的`.eslintrc`文件中修改为：
@@ -24,37 +23,9 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 
 > 注意: 这里省略了 `eslint-config-` 前缀，是因为它会被 eslint 自动补充。
 
-### react
-
-```bash
-yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react -D
-```
-
-在你的`.eslintrc`文件中修改为：
-
-```json
-{
-  "extends": "sea/react"
-}
-```
-
-如果想要在项目中使用 hook ，那么
-
-```bash
-yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
-```
-
-`.eslintrc`文件中修改为：
-
-```json
-{
-  "extends": ["sea/react", "sea/hooks"]
-}
-```
-
 **注：如果要使用实验性功能，例如箭头作为类方法，则需要使用 `@babel/eslint-parser` 作为解析器。默认解析器（Espree）不支持实验性功能。**
 
-`yarn add @babel/core @babel/eslint-parser -D` 后，将`.eslintrc`文件中修改为：
+`pnpm add @babel/core @babel/eslint-parser -D` 后，将`.eslintrc`文件中修改为：
 
 ```json
 {
@@ -81,13 +52,13 @@ yarn add eslint eslint-config-sea eslint-plugin-promise eslint-plugin-node eslin
 $ git clone https://github.com/MrSeaWave/lint-config.git
 $ cd lint-config/packages/eslint-config-sea
 # npm is not allowed.
-$ yarn
+$ pnpm
 ```
 
 Run Test
 
 ```shell
-$ yarn run test
+$ pnpm run test
 ```
 
 ### Pull Request Etiquette
