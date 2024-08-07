@@ -6,7 +6,9 @@
     "type": "git",
     "url": "https://github.com/MrSeaWave/lint-config.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "vitest"
+  },
   "description": "Sea's JS eslint config",
   "author": "Sea <MrDaemon@outlook.com>",
   "bugs": {

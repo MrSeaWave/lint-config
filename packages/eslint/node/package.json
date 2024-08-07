@@ -28,7 +28,9 @@
     "url": "https://github.com/MrSeaWave/lint-config/issues"
   },
   "homepage": "https://github.com/MrSeaWave/lint-config#readme",
-  "scripts": {},
+  "scripts": {
+    "test": "vitest"
+  },
   "dependencies": {
     "eslint-plugin-n": "^17.9.0"
   },
