@@ -15,7 +15,6 @@ describe('stylelint-config-sea with valid scss', () => {
 
   it('did not error', async () => {
     const data = await result;
-    console.log('🚀 ~ it ~ data:', data);
     expect(data.errored).toBeFalsy();
   });
 
@@ -40,7 +39,7 @@ describe('stylelint-config-sea with invalid scss', () => {
 
   it('flags one warning', () => {
     return result.then((data) => {
-      expect(data.results[0].warnings).toHaveLength(3);
+      expect(data.results[0].warnings).toHaveLength(1);
     });
   });
 
