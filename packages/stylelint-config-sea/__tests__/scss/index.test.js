@@ -13,6 +13,11 @@ describe('stylelint-config-sea with valid scss', () => {
     });
   });
 
+  it('rules snapshot', async () => {
+    const data = await result;
+    expect(data.results[0]._postcssResult.stylelint.config.rules).toMatchSnapshot();
+  });
+
   it('did not error', async () => {
     const data = await result;
     expect(data.errored).toBeFalsy();
