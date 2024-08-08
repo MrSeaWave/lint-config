@@ -1,4 +1,6 @@
 /* 禁止格式化 */
 a {
-  top: .2em;
+  top: 0.2em;
 }
+
+@import url('x.css');

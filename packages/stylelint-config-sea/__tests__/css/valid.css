@@ -53,7 +53,7 @@
 }
 
 /* Flush single line comment */
-@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (resolution >= 192dpi), screen and (resolution >= 2dppx) {
   .selector {
     animation: 3s none fade-in;
     background-image: repeating-linear-gradient(

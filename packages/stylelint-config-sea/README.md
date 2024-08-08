@@ -7,7 +7,7 @@
 ### css
 
 ```bash
-yarn add stylelint stylelint-config-sea -D
+pnpm add stylelint stylelint-config-sea -D
 ```
 
 在你的`.stylelintrc.json`文件中修改为：
@@ -21,7 +21,7 @@ yarn add stylelint stylelint-config-sea -D
 ### scss
 
 ```bash
-yarn add stylelint stylelint-config-sea -D
+pnpm add stylelint stylelint-config-sea -D
 ```
 
 如果使用时报错，你可能还需要安装 `postcss-scss` & `postcss` 至 `devDependencies`
@@ -47,13 +47,13 @@ yarn add stylelint stylelint-config-sea -D
 $ git clone https://github.com/MrSeaWave/lint-config.git
 $ cd lint-config/packages/stylelint-config-sea
 # npm is not allowed.
-$ yarn
+$ pnpm
 ```
 
 Run Test
 
 ```shell
-$ yarn run test
+$ pnpm run test
 ```
 
 ### Pull Request Etiquette

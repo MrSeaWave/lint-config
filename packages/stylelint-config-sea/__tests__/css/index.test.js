@@ -1,6 +1,7 @@
-const stylelint = require('stylelint');
-const config = require('../../index');
-const path = require('path');
+import { describe, it, expect, beforeEach } from 'vitest';
+import path from 'node:path';
+import stylelint from 'stylelint';
+import config from '../../index';
 
 describe('stylelint-config-sea with valid css', () => {
   let result;
@@ -45,13 +46,15 @@ describe('stylelint-config-sea with invalid css', () => {
 
   it('correct warning text', () => {
     return result.then((data) =>
-      expect(data.results[0].warnings[0].text).toBe('Expected a leading zero (number-leading-zero)')
+      expect(data.results[0].warnings[0].text).toBe(
+        'Unexpected invalid position @import rule (no-invalid-position-at-import-rule)'
+      )
     );
   });
 
   it('correct rule flagged', () => {
     return result.then((data) =>
-      expect(data.results[0].warnings[0].rule).toBe('number-leading-zero')
+      expect(data.results[0].warnings[0].rule).toBe('no-invalid-position-at-import-rule')
     );
   });
 
@@ -60,10 +63,10 @@ describe('stylelint-config-sea with invalid css', () => {
   });
 
   it('correct line number', () => {
-    return result.then((data) => expect(data.results[0].warnings[0].line).toBe(3));
+    return result.then((data) => expect(data.results[0].warnings[0].line).toBe(6));
   });
 
   it('correct column number', () => {
-    return result.then((data) => expect(data.results[0].warnings[0].column).toBe(8));
+    return result.then((data) => expect(data.results[0].warnings[0].column).toBe(1));
   });
 });
