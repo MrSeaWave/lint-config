@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-sea-rcmd",
-  "version": "0.2.3",
+  "name": "eslint-config-sea",
+  "version": "1.0.0",
   "description": "Sea's eslint config",
   "keywords": [
     "eslint",
