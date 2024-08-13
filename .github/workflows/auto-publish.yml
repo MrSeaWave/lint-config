@@ -74,9 +74,10 @@ jobs:
         uses: changesets/action@v1
         with:
           version: pnpm run ci:version
-          commit: 'chore: update versions'
-          title: 'chore: update versions'
+          commit: 'chore(release): publish 🎨 🎨 🎨'
+          title: 'chore(release): Auto Publish'
           publish: pnpm run ci:publish
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          # GITHUB_TOKEN 是 CI 里自带的默认 token，应该不用再次配置
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
