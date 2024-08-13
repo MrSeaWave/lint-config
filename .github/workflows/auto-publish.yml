@@ -12,7 +12,6 @@ on:
 
 env:
   CI: true
-  PNPM_CACHE_FOLDER: .pnpm-store
 
 jobs:
   auto-publish:
@@ -36,7 +35,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Global install Pnpm 🔨
-        run: npm install -g pnpm@8.15.8
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8.15.8
+
       - name: Print Env 📄
         run: |
           echo "node"
@@ -45,12 +47,26 @@ jobs:
           npm -v
           echo "pnpm"
           pnpm -v
-      # https://pnpm.io/zh/using-changesets
-      - name: Setup pnpm config
-        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+          - name: Get pnpm store directory
+          shell: bash
+          run: |
+            echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies 📦️
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Setup credentials
         # 仅是为了区分，暂无其他作用
