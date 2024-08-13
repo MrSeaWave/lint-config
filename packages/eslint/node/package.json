@@ -1,7 +1,30 @@
 {
   "name": "eslint-config-sea-node",
   "version": "1.0.1",
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrSeaWave/lint-config.git"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
   "description": "Sea's NodeJS eslint config",
+  "author": "Sea <MrDaemon@outlook.com>",
+  "bugs": {
+    "url": "https://github.com/MrSeaWave/lint-config/issues"
+  },
+  "contributors": [
+    {
+      "name": "Sea",
+      "email": "MrDaemon@outlook.com"
+    }
+  ],
+  "homepage": "https://github.com/MrSeaWave/lint-config#readme",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -11,26 +34,7 @@
     "nodejs",
     "sea"
   ],
-  "author": "Sea <MrDaemon@outlook.com>",
-  "contributors": [
-    {
-      "name": "Sea",
-      "email": "MrDaemon@outlook.com"
-    }
-  ],
   "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MrSeaWave/lint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/MrSeaWave/lint-config/issues"
-  },
-  "homepage": "https://github.com/MrSeaWave/lint-config#readme",
-  "scripts": {
-    "test": "vitest"
-  },
   "dependencies": {
     "eslint-plugin-n": "^17.9.0"
   },
