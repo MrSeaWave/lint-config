@@ -1,18 +1,22 @@
 # Change Log
 
+## 1.0.1
+
+### Patch Changes
+
+- a006dc7: init v1 pkg
+- Updated dependencies [a006dc7]
+  - eslint-config-sea-react@1.0.1
+  - eslint-config-sea-js@1.0.1
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [0.2.3](https://github.com/MrSeaWave/lint-config/compare/eslint-config-sea@0.2.2...eslint-config-sea@0.2.3) (2021-12-17)
 
-
 ### Bug Fixes
 
-* update 注释 ([49787eb](https://github.com/MrSeaWave/lint-config/commit/49787eb7834af3bb5189ed8bfa2b6db64993ba54))
-
-
-
-
+- update 注释 ([49787eb](https://github.com/MrSeaWave/lint-config/commit/49787eb7834af3bb5189ed8bfa2b6db64993ba54))
 
 ## [0.2.2](https://github.com/MrSeaWave/lint-config/compare/eslint-config-sea@0.2.1...eslint-config-sea@0.2.2) (2021-12-15)
 
