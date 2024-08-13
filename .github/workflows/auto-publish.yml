@@ -81,3 +81,5 @@ jobs:
           # GITHUB_TOKEN 是 CI 里自带的默认 token，应该不用再次配置
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          # see https://github.com/changesets/action/issues/311
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
