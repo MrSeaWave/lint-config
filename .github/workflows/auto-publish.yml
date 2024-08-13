@@ -47,10 +47,6 @@ jobs:
           npm -v
           echo "pnpm"
           pnpm -v
-          - name: Get pnpm store directory
-          shell: bash
-          run: |
-            echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
       - name: Get pnpm store directory
         shell: bash

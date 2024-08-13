@@ -1,1 +1,1 @@
-console.log('触发 pipeline');
+console.log('触发 pipeline 1');
