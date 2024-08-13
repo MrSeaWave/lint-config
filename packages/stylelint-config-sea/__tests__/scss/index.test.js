@@ -1,6 +1,7 @@
-const stylelint = require('stylelint');
-const config = require('../../scss');
-const path = require('path');
+import { describe, it, expect, beforeEach } from 'vitest';
+import stylelint from 'stylelint';
+import config from '../../scss';
+import path from 'path';
 
 describe('stylelint-config-sea with valid scss', () => {
   let result;
@@ -10,6 +11,11 @@ describe('stylelint-config-sea with valid scss', () => {
       files: path.resolve(__dirname, './valid.scss'),
       config,
     });
+  });
+
+  it('rules snapshot', async () => {
+    const data = await result;
+    expect(data.results[0]._postcssResult.stylelint.config.rules).toMatchSnapshot();
   });
 
   it('did not error', async () => {
@@ -37,7 +43,9 @@ describe('stylelint-config-sea with invalid scss', () => {
   });
 
   it('flags one warning', () => {
-    return result.then((data) => expect(data.results[0].warnings).toHaveLength(1));
+    return result.then((data) => {
+      expect(data.results[0].warnings).toHaveLength(1);
+    });
   });
 
   it('correct warning text', () => {

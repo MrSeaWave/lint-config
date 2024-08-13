@@ -1,32 +1,48 @@
 {
   "name": "root",
   "private": true,
-  "scripts": {
-    "clean": "lerna clean",
-    "release": "lerna publish",
-    "test": "lerna run test",
-    "createRelease": "node ./scripts/createRelease.js",
-    "postinstall": "husky install"
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrSeaWave/lint-config.git"
   },
-  "lint-staged": {
-    "*.{json,md}": [
-      "prettier -w"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "prettier -w"
-    ]
+  "author": "Sea <MrDaemon@outlook.com>",
+  "contributors": [
+    {
+      "name": "Sea",
+      "email": "MrDaemon@outlook.com"
+    }
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "release": "lerna publish",
+    "createRelease": "node ./scripts/createRelease.js",
+    "prepare": "husky",
+    "clean-local": "rimraf --glob '**/node_modules'",
+    "changeset": "changeset",
+    "ci:publish": "pnpm publish -r",
+    "ci:version": "changeset version"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
+    "@changesets/cli": "^2.27.7",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@octokit/rest": "^18.12.0",
-    "husky": "^7.0.4",
-    "jest": "^27.4.3",
-    "lerna": "^4.0.0",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.5.1"
+    "@types/eslint": "^8.56.11",
+    "@vitest/coverage-v8": "^2.0.5",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
+    "npm-package-json-lint": "^8.0.0",
+    "npm-package-json-lint-config-default": "^7.0.1",
+    "prettier": "2.8.8",
+    "rimraf": "^6.0.1",
+    "vitest": "^2.0.4"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "engines": {
+    "node": "^18.19.1",
+    "pnpm": "^8.15.8"
+  },
+  "packageManager": "pnpm@8.15.8"
 }

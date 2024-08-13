@@ -1,0 +1,5 @@
+{
+  "package.json": ["npmPkgJsonLint ."],
+  "*.{json,md}": ["prettier -w"],
+  "*.{js,jsx,ts,tsx}": ["prettier -w"]
+}

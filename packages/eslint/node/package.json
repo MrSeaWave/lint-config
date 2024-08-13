@@ -1,0 +1,45 @@
+{
+  "name": "eslint-config-sea-node",
+  "version": "1.0.0",
+  "description": "Sea's NodeJS eslint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "js",
+    "node",
+    "nodejs",
+    "sea"
+  ],
+  "author": "Sea <MrDaemon@outlook.com>",
+  "contributors": [
+    {
+      "name": "Sea",
+      "email": "MrDaemon@outlook.com"
+    }
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrSeaWave/lint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrSeaWave/lint-config/issues"
+  },
+  "homepage": "https://github.com/MrSeaWave/lint-config#readme",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "eslint-plugin-n": "^17.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/preset-env": "^7.16.4",
+    "eslint": "8.57.0",
+    "eslint-config-sea-js": "workspace:^",
+    "vitest": "^2.0.4"
+  }
+}

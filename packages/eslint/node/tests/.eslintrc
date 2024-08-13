@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": ["sea-js", "../index.js"],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "n/no-unpublished-import": "off"
+      }
+    }
+  ]
+}

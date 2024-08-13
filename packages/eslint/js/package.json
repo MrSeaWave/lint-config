@@ -1,0 +1,41 @@
+{
+  "name": "eslint-config-sea-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrSeaWave/lint-config.git"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "description": "Sea's JS eslint config",
+  "author": "Sea <MrDaemon@outlook.com>",
+  "bugs": {
+    "url": "https://github.com/MrSeaWave/lint-config/issues"
+  },
+  "contributors": [
+    {
+      "name": "Sea",
+      "email": "MrDaemon@outlook.com"
+    }
+  ],
+  "homepage": "https://github.com/MrSeaWave/lint-config#readme",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "js",
+    "sea"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.6.0"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "vitest": "^2.0.4"
+  }
+}
