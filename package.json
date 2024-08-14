@@ -22,7 +22,7 @@
     "prepare": "husky",
     "clean-local": "rimraf --glob '**/node_modules'",
     "changeset": "changeset",
-    "ci:publish": "pnpm publish -r",
+    "ci:publish": "changeset publish",
     "ci:version": "changeset version"
   },
   "devDependencies": {
