@@ -1,5 +1,11 @@
 # eslint-config-sea-js
 
+## 1.0.3
+
+### Patch Changes
+
+- a2144a8: chore: update
+
 ## 1.0.2
 
 ### Patch Changes

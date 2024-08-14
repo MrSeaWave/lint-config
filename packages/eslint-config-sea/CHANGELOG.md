@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [a2144a8]
+  - eslint-config-sea-js@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
